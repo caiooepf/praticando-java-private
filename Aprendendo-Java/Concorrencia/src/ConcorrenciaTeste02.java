@@ -38,7 +38,11 @@
 public class ConcorrenciaTeste02 {
 
 
-    static void main(String[] args) {
-
+    static void main(String[] args) throws InterruptedException {
+    Thread t1 = new Thread(new ThreadExample2('K'));
+    Thread t2 = new Thread(new ThreadExample2('A'));
+    t1.start();
+    t1.join();
+    t2.start();
     }
 }
